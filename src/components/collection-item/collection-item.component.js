@@ -1,4 +1,5 @@
 import React from 'react';
+import './collection-item.styles.scss';
 
 export default function CollectionItem({ id, name, imageUrl, price }) {
   return (
