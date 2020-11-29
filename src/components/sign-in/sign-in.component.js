@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import './sign-in.styles.scss';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
@@ -23,7 +22,6 @@ export default class SignIn extends Component {
     try {
       await auth.signInWithEmailAndPassword(email, password);
       this.setState({ email: '', password: '' });
-      Redirect('/');
     } catch (error) {
       console.log('there was an error signing in', error.message);
     }
